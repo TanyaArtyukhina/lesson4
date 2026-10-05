@@ -1,57 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
-    <title>Dostaffkin — Доставка посылок между странами и внутри стран. Безопасно. Быстро. В целости и сохранности!
-    </title>
-    <link href="styles/base.css" rel="stylesheet" />
-    <link href="styles/base_adaptive.css" rel="stylesheet" />
-    <link href="styles/index.css" rel="stylesheet" />
-    <link href="styles/index_adaptive.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>портфолио UX/UI</title>
+  <meta property="og:title" content="портфолио UX/UI">
+  <meta property="og:type" content="website">
+
+  <!-- Основные стили (экран 1200px и шире) -->
+  <link rel="stylesheet" href="./styles/index.css">
+  <!-- Мобильная версия (до 1199px, рассчитана на 360px) -->
+  <link rel="stylesheet" href="./styles/index_adaptive.css" media="screen and (max-width: 500px)">
 </head>
-
 <body>
+  <header class="header">
+  <nav class="header__nav">
+    <a class="header__link" href="#top">Обо мне</a>
+    <a class="header__link" href="#projects">Мои работы</a>
+    <a class="header__link" href="#contacts">Контакты</a>
+  </nav>
+</header>
+  <div class="page">
+    <div class="canvas">
 
-    <div class="container">
-        <header class="header">
-            <a class="header-brand" href="#">
-                <div class="header-logo">D</div>
-                <div class="header-title">Dostaffkin</div>
-            </a>
-            <nav class="header-menu">
-                <a class="header-link" href="./order.html">Оформить <span>доставку</span></a>
-                <a class="header-link" href="./track.html">Отследить <span>посылку</span></a>
-            </nav>
-        </header>
-        <main class="main">
-            <section class="main-info">
-                <div class="main-title">
-                    <span>D</span>ostaffkin
-                </div>
-                <div class="main-features">
-                    <div class="main-feature">Отслеживание 24/7</div>
-                    <div class="main-feature">Лучшие маршруты</div>
-                    <div class="main-feature">Страхование посылок</div>
-                    <div class="main-feature">Доставка в срок</div>
-                    <div class="main-feature">Выгодные тарифы</div>
-                </div>
-                <div class="main-description">
-                    Доставка посылок между странами и внутри стран.
-                    Безопасно. Быстро. В целости и сохранности!
-                </div>
-                <div class="main-actions">
-                    <a class="button" type="button" href="./order.html">Заказать доставку</a>
-                    <a class="button button-white" type="button" href="./track.html">Отследить посылку</a>
-                </div>
-            </section>
-            <div class="main-title-ghost">Dostaffkin</div>
-            <section class="main-image">
-                <img src="images/main-image.png" alt="Main image" />
-            </section>
-        </main>
+      <!-- ===== Главный экран ===== -->
+       <body id="top"></body>
+      <header class="hero">
+        <div class="hero__photo ph" id="img-hero" role="img" aria-label=""></div>
+        <p class="hero__name">Татьяна Артюхина</p>
+        <h1 class="hero__title">UX/UI DESIGNER</h1>
+        <p class="hero__subtitle">Ниже можете ознакомиться с моими pet-проектами</p>
+        <ul class="hero__list">
+          <li class="hero__item">
+            <span class="hero__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" fill="none" role="img" aria-label=""><path d="M2.6555441379310345 11.22356551724138L8.767227586206896 20.862524137931032L19.345206896551723 2.655612413793103" stroke="#4E4D4D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span class="hero__text">Пройден курс от Skilltor “UX/UI дизайн <br class="hero__br">для новичков”</span>
+          </li>
+          <li class="hero__item">
+            <span class="hero__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" fill="none" role="img" aria-label=""><path d="M2.6555441379310345 11.22356551724138L8.767227586206896 20.862524137931032L19.345206896551723 2.655612413793103" stroke="#4E4D4D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span class="hero__text">Интенсив по UX/UI дизайну от Itlogia</span>
+          </li>
+          <li class="hero__item">
+            <span class="hero__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 24" fill="none" role="img" aria-label=""><path d="M2.6555441379310345 11.22356551724138L8.767227586206896 20.862524137931032L19.345206896551723 2.655612413793103" stroke="#4E4D4D" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+            <span class="hero__text">Интенсив по Frontend разработке от Itlogia</span>
+          </li>
+        </ul>
+      </header>
+
+      <!-- ===== Проекты ===== -->
+        <main class="projects">
+        <h2 class="projects__title" id="projects">Разработанные проекты</h2>
+
+        <!-- 01 -->
+        <section class="project project--1">
+          <div class="project__head">
+            <div class="project__num"><span>01</span></div>
+            <h3 class="project__name">Интернет-магазин ювелирных украшений</h3>
+          </div>
+          <div class="chip chip--l"><span>Прототипирование</span></div>
+          <div class="chip chip--r"><span>UI дизайн</span></div>
+          <div class="img img--l ph" id="img-1-1" role="img" aria-label=""></div>
+          <div class="img img--r ph" id="img-1-2" role="img" aria-label=""></div>
+        </section>
+
+        <!-- 02 -->
+        <section class="project project--2">
+          <div class="project__head">
+            <div class="project__num"><span>02</span></div>
+            <h3 class="project__name">Редизайн макета</h3>
+          </div>
+          <div class="chip chip--l"><span>ДО</span></div>
+          <div class="chip chip--r"><span>ПОСЛЕ</span></div>
+          <div class="img img--l ph" id="img-2-1" role="img" aria-label=""></div>
+          <div class="img img--r ph" id="img-2-2" role="img" aria-label=""></div>
+        </section>
+
+        <!-- 03 -->
+        <section class="project project--3">
+          <div class="project__head">
+            <div class="project__num"><span>03</span></div>
+            <h3 class="project__name">Макет сайта доставки</h3>
+          </div>
+          <div class="img img--1 ph" id="img-3-1" role="img" aria-label=""></div>
+          <div class="img img--2 ph" id="img-3-2" role="img" aria-label=""></div>
+          <div class="img img--3 ph" id="img-3-3" role="img" aria-label=""></div>
+          <div class="img img--4 ph" id="img-3-4" role="img" aria-label=""></div>
+        </section>
+
+        <!-- 04 -->
+        <section class="project project--4">
+          <div class="project__head">
+            <div class="project__num"><span>04</span></div>
+            <h3 class="project__name">Лендинг для каршеринга</h3>
+          </div>
+          <div class="img ph" id="img-4-1" role="img" aria-label=""></div>
+        </section>
+
+        <!-- 05 -->
+        <section class="project project--5">
+          <div class="project__head">
+            <div class="project__num"><span>05</span></div>
+            <h3 class="project__name">Best Burgers — сайт доставки бургеров </h3>
+          </div>
+          <div class="chip chip--l"><span>Главный экран</span></div>
+          <div class="img ph" id="img-5-1" role="img" aria-label=""></div>
+        </section>
+      </main>
+
+      <!-- ===== Контакты ===== -->
+      <footer class="footer" id="contacts">
+        <p class="footer__phone">8 (987) 582 66 27</p>
+        <p class="footer__email">taartyukhina@mail.ru</p>
+        <p class="footer__note">Буду рада сотрудничеству!</p>
+        <a class="btn" href="mailto:taartyukhina@mail.ru" class="email-button">
+          <span class="btn__content">
+            <span class="btn__icon"></span>
+            <span class="btn__text">Напишите мне</span>
+          </span>
+        </a>
+      </footer>
+
     </div>
+  </div>
 </body>
-
 </html>

@@ -1,97 +1,463 @@
-.container {
-    overflow: hidden;
-    min-height: 100vh;
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 250 1000;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations');     
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Light.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Light.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Regular.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Regular.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Medium.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Medium.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Semibold.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Semibold.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Semibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Bold.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Bold.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Extrabold.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Extrabold.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Extrabold.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Extrabold.woff') format('woff');
+}
+@font-face {
+  font-family: 'TildaSans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Black.eot');
+  src: url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Black.eot?#iefix') format('embedded-opentype'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff2') format('woff2-variations'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-VF.woff') format('woff-variations'),  
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Black.woff2') format('woff2'),
+       url('https://static.tildacdn.com/fonts/tildasans/TildaSans-Black.woff') format('woff');
 }
 
-.main {
-    padding: 111px 40px 40px;
-    position: relative;
-    display: flex;
+/* =====================================================================
+   БАЗА
+   ===================================================================== */
+:root { --t-text-font: 'TildaSans', Arial, sans-serif; }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+body {
+  background: #ffffff;
+  font-family: var(--t-text-font);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+h1, h2, h3, p, ul { margin: 0; padding: 0; font-weight: inherit; font-size: inherit; }
+ul { list-style: none; }
+
+/* =====================================================================
+   КАРТИНКИ-ЗАГЛУШКИ
+   Чтобы вставить изображение, раскомментируйте нужную строку ниже
+   и замените ССЫЛКА на адрес картинки.
+   ===================================================================== */
+.ph {
+  background-color: #d9d9d9;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#img-hero { background-image: url("../images/фото3.jpg"); }  /*фото в круге на главном экране (350×350)*/
+#img-1-1  { background-image: url("../images/E-commerce_prototype.jpg"); }  /*01, слева (486×903)*/ 
+#img-1-2  { background-image: url("../images/E-commerce.jpg"); }  /*01, справа  (486×903) */
+#img-2-1  { background-image: url("../images/макет_до.jpg"); }  /*02 ДО       (486×304)*/ 
+#img-2-2  { background-image: url("../images/редизайн.jpg"); }  /*02 ПОСЛЕ    (486×304)*/ 
+#img-3-1  { background-image: url("../images/1.jpg"); }  /*03, верх слева   (485×260)*/ 
+#img-3-2  { background-image: url("../images/2.jpg"); }  /*03, верх справа  (484×260)*/ 
+#img-3-3  { background-image: url("../images/3.jpg"); }  /*03, низ справа   (485×260) */
+#img-3-4  { background-image: url("../images/4.jpg"); }  /*03, низ слева    (484×260) */
+#img-4-1  { background-image: url("../images/landing_делимобиль.jpg"); } /* 04              (588×922) */
+#img-5-1  { background-image: url("../images/макет.jpg"); }  /*05              (995×622) */
+
+/* =====================================================================
+   ХОЛСТ 1200px
+   ===================================================================== */
+.page {
+  position: relative;
+  width: 100%;
+  height: 5467px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.canvas {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 600px);
+  width: 1200px;
+  height: 5467px;
+  background-color: #ffffff;
 }
 
-.main-info {
-    max-width: 840px;
-    width: 100%;
-    position: relative;
+/* =====================================================================
+   ГЛАВНЫЙ ЭКРАН
+   ===================================================================== */
+.hero {
+  position: absolute;
+  top: 103px;
+  left: 102px;
+  width: 996px;
+  height: 410px;
+  border-radius: 32px;
+  background-color: #f2dede;
+}
+.hero__photo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 350px;
+  height: 350px;
+  border-radius: 3000px;
+}
+.hero__title {
+  position: absolute;
+  top: 81px;
+  left: 408px;
+  font-size: 65px;
+  line-height: 78px;
+  font-weight: 600;
+  color: #000000;
+  white-space: nowrap;
+}
+.hero__name {
+  position: absolute;
+  top: 28px;
+  left: 486px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #4e4d4d;
+  white-space: nowrap;
+}
+.hero__subtitle {
+  position: absolute;
+  top: 372px;
+  left: 408px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #4e4d4d;
+  white-space: nowrap;
+}
+.hero__list {
+  position: absolute;
+  top: 182px;
+  left: 401px;
+  width: 108px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+}
+.hero__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.hero__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+.hero__icon svg { display: block; width: 22px; height: auto; }
+.hero__text {
+  display: block;
+  width: 638px;
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #4e4d4d;
 }
 
-.main-title {
-    margin-top: 98px;
-    font-weight: 500;
-    font-size: 200px;
-    line-height: 1;
-    letter-spacing: -0.05em;
-    color: #111111;
-    left: -15px;
-    position: relative;
+/* =====================================================================
+   ПРОЕКТЫ
+   ===================================================================== */
+.projects__title {
+  position: absolute;
+  top: 573px;
+  left: 102px;
+  font-size: 65px;
+  line-height: 78px;
+  font-weight: 600;
+  color: #000000;
+  white-space: nowrap;
 }
 
-.main-title span {
-    color: #ffcc00;
+.project {
+  position: absolute;
+  left: 102px;
+  width: 996px;
+}
+.project--1 { top: 692px;  height: 1088px; }
+.project--2 { top: 1840px; height: 489px; }
+.project--3 { top: 2389px; height: 664px; }
+.project--4 { top: 3113px; width: 588px; height: 1037px; }
+.project--5 { top: 4210px; width: 995px; height: 809px; }
+
+/* номер + название */
+.project__head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 24px;
+}
+.project__num {
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+.project__num span {
+  display: block;
+  flex-shrink: 0;
+  font-size: 45px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #f2dede;
+  white-space: nowrap;
+}
+.project--1 .project__num span { width: 100%; }
+.project__name {
+  flex-shrink: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #4e4d4d;
+  white-space: nowrap;
 }
 
-.main-features {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+/* плашки-подписи */
+.chip {
+  position: absolute;
+  top: 105px;
+  width: max-content;
+  height: 38px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  border-radius: 100px;
+  background-color: #f2dede;
+}
+.chip span {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #4e4d4d;
+  white-space: nowrap;
+}
+.chip--l { left: 0; }
+.chip--r { left: 510px; }
+.project--1 .chip--l { width: 147px; }
+.project--1 .chip--r { width: 83px; }
+
+
+/* изображения */
+.img { position: absolute; border-radius: 0; }
+
+/* 01 */
+.project--1 .img--l { top: 185px; left: 0;     width: 486px; height: 903px; }
+.project--1 .img--r { top: 185px; left: 510px; width: 486px; height: 903px; }
+/* 02 */
+.project--2 .img--l { top: 185px; left: 0;     width: 486px; height: 304px; }
+.project--2 .img--r { top: 185px; left: 510px; width: 486px; height: 304px; }
+/* 03 */
+.project--3 .img--1 { top: 115px; left: 0;     width: 485px; height: 260px; }
+.project--3 .img--2 { top: 115px; left: 510px; width: 484px; height: 260px; }
+.project--3 .img--3 { top: 404px; left: 511px; width: 485px; height: 260px; }
+.project--3 .img--4 { top: 404px; left: 2px;   width: 484px; height: 260px; }
+/* 04 */
+.project--4 .img { top: 115px; left: 0; width: 588px; height: 922px; }
+/* 05 */
+.project--5 .img { top: 187px; left: 0; width: 995px; height: 622px; }
+
+/* =====================================================================
+   КОНТАКТЫ
+   ===================================================================== */
+.footer {
+  position: absolute;
+  top: 5119px;
+  left: 0;
+  width: 100%;
+  height: 348px;
+  background-color: #f2dede;
+}
+.footer__phone,
+.footer__email {
+  position: absolute;
+  top: 65px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #4e4d4d;
+  white-space: nowrap;
+}
+.footer__phone { left: 102px; }
+.footer__email { left: 714px; }
+.footer__note {
+  position: absolute;
+  top: 271px;
+  left: 495px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #4e4d4d;
+  white-space: nowrap;
 }
 
-.main-feature {
-    background: #111111;
-    color: #ffffff;
-    padding: 12px 14px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1;
-    border-radius: 10px;
+/* кнопка «Напишите мне» */
+.btn {
+  position: absolute;
+  top: 113px;
+  left: 730px;
+  width: 194px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: #4e4d4d;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.btn__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  min-width: 0;
+}
+.btn__icon {
+  order: -1;
+  position: relative;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+.btn__icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5.5 14.5L14.5 5.5M7 5.5H14.5V13' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5.5 14.5L14.5 5.5M7 5.5H14.5V13' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.btn__text {
+  flex: 1 1 0;
+  color: #ffffff;
+  white-space: nowrap;
 }
 
-.main-description {
-    margin-top: 50px;
-    max-width: 500px;
-    font-size: 20px;
-    line-height: 1.1;
-    color: #111111;
-}
+/* ===== Плавная прокрутка ===== */
+html { scroll-behavior: smooth; }
 
-.main-actions {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* ===== Хедер ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
+.header__nav {
+  display: flex;
+  align-items: center;
+  column-gap: 46px;
+}
+.header__link {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  color: #4e4d4d;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.header__link:hover { color: #000000; }
 
-.main-actions .button {
-    height: 80px;
-    width: 433px;
-    font-size: 18px;
-    font-weight: bold;
-    place-items: center;
-    display: grid;
-}
-
-.main-title-ghost {
-    position: absolute;
-    z-index: -1;
-    left: -70px;
-    bottom: -150px;
-    font-weight: 500;
-    font-size: 278px;
-    line-height: 1;
-    letter-spacing: -0.05em;
-    color: #ECEDF04D;
-}
-
-.main-image {
-    width: 1024px;
-    top: 100px;
-    z-index: -2;
-}
-
-.main-image img {
-    width: 100%;
-    max-width: 1024px;
-    height: auto;
-    display: block;
-}
+/* чтобы заголовок раздела не прятался под хедером */
+#projects,
+#contacts { scroll-margin-top: 100px; }
